@@ -30,6 +30,8 @@ int x=250;            // Horizontal position of ball
        direction_x=-direction_x;             //Reverse direction of the ball if it hits the rectangle(paddle),increase score by 1 and repositions the x position of the ball                  
       score++;    
        x=30;
+       direction_x++;
+       direction_y++;       
     
     }   
     if(y<10) direction_y=-direction_y;           //Reverse direction if ball hits the top boundry 
