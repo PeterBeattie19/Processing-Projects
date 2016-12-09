@@ -58,12 +58,14 @@ void move() {
     
     void intersection() {
     
-    for(int  i = 0; i<total; i++) {
-    PVector tailPosition = tail.get(i); 
-    
-    if(xcord()==tailPosition.x && ycord()==tailPosition.y) {
-                   check = false; 
-          tail.clear(); 
+    for(int  i = 0; i<total; i++) {        //loop that goes through every section of the snakes body, 
+    PVector tailPosition = tail.get(i);    // this piece of code creates a vector to temporarly store the the x and y coordinates
+                                           //  of the current piece of the tail that is being checked in the loop. 
+                                           
+    if(xcord()==tailPosition.x && ycord()==tailPosition.y) {    //if the x and y coordinates of the body piece are the same as those
+                   check = false;                               // of the snake's head then the body size is reset to zero(total) and
+          tail.clear();                                        // and the array that stores the vectors is cleared                    
+        
           total=0; 
           
 
